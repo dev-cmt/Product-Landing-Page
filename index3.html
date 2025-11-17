@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Full Sleeve 3Piece - Fitview BD</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #ff0000;
+            --secondary-color: #1e293b;
+            --accent-color: #f9fafb;
+            --text-color: #334155;
+        }
+
+        body {
+            font-family: "Hind Siliguri", Sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img-3/village-nature.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 48px 0;
+            text-align: center;
+        }
+
+        .hero-svg-shape {
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            margin-bottom: -49px;
+        }
+
+        .hero-svg-shape svg {
+            display: block;
+            width: 100%;
+            height: auto;
+            /* makes it responsive */
+        }
+
+        .elementor-shape-fill {
+            fill: #ffffff;
+            /* white color */
+        }
+
+        .hero-logo-box {
+            width: 90px;
+            height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            /* rounded corners */
+            background-color: #fff;
+            /* initial background */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            overflow: hidden;
+            /* keep image inside box */
+            cursor: pointer;
+        }
+
+        .hero-logo-box:hover {
+            background-color: #f0f0f0;
+            /* subtle hover background */
+            box-shadow: 0px 0px 10px 0px #22FF00;
+            /* stronger shadow */
+        }
+
+        .hero-logo-box img {
+            width: 80%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .hero-logo-box:hover img {
+            transform: scale(1.1);
+            /* zoom image on hover */
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            padding: 8px 12px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #a10000;
+            border-color: #a10000;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 116, 0, 0.3);
+        }
+
+
+        .header-title {
+            text-align: center;
+            box-shadow: 0px 2px 8px #323232;
+            margin: 40px 0px;
+            padding: 12px 0px;
+            font-size: 34px;
+            font-weight: 700;
+            color: #004727;
+        }
+
+        .section-title {
+            background-color: #00571c;
+            color: #fff;
+            text-align: center;
+            box-shadow: 0px 2px 8px #323232;
+            margin: 20px 0px;
+            padding: 15px 0px;
+            font-size: 34px;
+            font-weight: 700;
+        }
+
+
+
+        .feature-list {
+            display: flex;
+            justify-content: center;
+        }
+
+        .feature-list ul {
+            list-style-type: none;
+            padding: 0 8px;
+        }
+
+        .feature-list ul li {
+            padding: 10px 0px;
+            border-bottom: 1px solid #ccc;
+            color: #00571c;
+            display: flex;
+        }
+
+        .feature-list ul li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-list .feature-icon svg {
+            width: 25px;
+            margin-right: 10px;
+            fill: #00571c;
+        }
+
+        .feature-list .feature-text {
+            font-size: 19px;
+            font-weight: bolder;
+        }
+
+        .service-item{
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 0 8px;
+            border-radius: 8px;
+            box-shadow: 2px 4px 4px #0000004d;
+
+        }
+
+        .service-item h3{
+            font-size: 22px;
+            color: var(--primary-color);
+            text-align: center;
+            padding-top: 18px;
+            font-weight: bolder;
+        }
+        .service-item p{
+            font-size: 16px;
+            text-align: center;
+            padding: 10px 0;
+            font-weight: 400;
+            color: #043d16;
+        }
+
+
+        .checkout-section{
+            background-color: #D6E9B24F;
+            padding: 15px 0;
+        }
+
+         .checkout-container {
+            background: #fff;
+            border: 1px solid #00571c;
+            border-radius: 20px;
+            border-top: 8px solid #00571c;
+            border-bottom: 8px solid #00571c;
+        }
+        
+
+        .product-card {
+            position: relative;
+            display: flex;
+            align-items: center;
+            background: #eaf5d5;
+            padding: 20px 5px;
+            border-radius: 8px;
+            border: 1px solid #d3e3b5;
+            overflow: hidden;
+        }
+
+        .radio-area {
+            margin-right: 10px;
+        }
+
+        .product-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 4px;
+            object-fit: cover;
+            margin-right: 12px;
+        }
+
+        .product-info {
+            flex: 1;
+        }
+
+        .title {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .qty-price {
+            display: flex;
+            align-items: center;
+            margin-top: 8px;
+        }
+
+        .qty-box {
+            display: flex;
+            align-items: center;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .qty-btn {
+            padding: 4px 10px;
+            border: none;
+            background: #f2f2f2;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .qty-input {
+            width: 40px;
+            text-align: center;
+            border: none;
+            font-size: 16px;
+        }
+
+        .price {
+            font-size: 18px;
+            font-weight: 600;
+            margin-left: 12px;
+        }
+
+        /* Red Ribbon Badge */
+        .badge-ribbon {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            background: #e80000;
+            color: white;
+            padding: 4px 18px;
+            font-size: 9px;
+            font-weight: bold;
+            transform: rotate(45deg) translate(35px, -15px);
+        }
+        
+        .note-box {
+            background: #f2f2f2;
+            border-radius: 4px;
+        }
+
+        .checkout-btn {
+            background: var(--primary-color);
+            color: #fff;
+            border: none;
+        }
+
+        .checkout-btn:hover {
+            background: #960000;
+            color: #fff;
+        }
+
+
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 60px 0;
+            }
+
+            .hero-svg-shape {
+                margin-bottom: -62px;
+            }
+
+            .hero-section h1 {
+                font-size: 1.8rem;
+            }
+            .header-title{
+                font-size: 22px;
+            }
+            .section-title{
+                font-size: 22px;
+            }
+            .feature-list .feature-text{
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="d-flex justify-content-center mb-4">
+                        <div class="hero-logo-box">
+                            <img src="img-3/logo.png" class="hero-logo" alt="logo">
+                        </div>
+                    </div>
+
+                    <h1 class="fw-bold fs-1 mb-4">সন্ধি মনি – প্রাকৃতিক ব্যথা নাশক তৈল</h1>
+                    <div class="video section">
+                        <iframe width="100%" height="300" src="https://www.youtube.com/embed/_Do4haI6aUY"
+                            frameborder="0" allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <a href="#order" class="btn btn-primary btn-lg mt-4"><i class="fas fa-shopping-cart me-2"></i>অর্ডার করুন</a>
+
+                </div>
+            </div>
+        </div>
+        <!-- SVG Shape -->
+        <div class="hero-svg-shape">
+            <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 283.5 27.8"
+                preserveAspectRatio="xMidYMax slice">
+                <path class="elementor-shape-fill"
+                    d="M282.7 3.4c-2 3.8-2.2 6.6-1.8 10.8.3 3.3 2 8.5.4 11.6-1.4 2.6-4 2.5-5-.2-1.2-3.4.3-7.6.5-11.1.3-4.3-2.9-6.9-7.4-5.8-3.1.7-4.1 3.3-4.3 6.2-.2 2 1.2 8-.1 9.6-3.1 4.3-2.5-4.5-2.5-5.2.1-4-.1-9.6-4.1-11.6-4.5-2.3-6.1 1-5.5 5 .2 1.4 1.5 10.2-2.7 6.9-2.5-1.9.4-7.5-.9-10.3-.8-1.8-2.6-4.2-4.8-4.1-2.4.1-2.7 2.2-4 3.7-3.3 3.8-2.2-1.2-4.8-2.7-5.5-3.1-2 5.6-2.9 7.3-1.4 2.4-3.1.6-3.3-1.3-.1-1.5.5-3.1.4-4.6-.3-4.3-2.9-5.3-5.2-1.2-3.7 6.7-2.8-1.9-6.5-.4-3 1.1-.9 9.2-.6 11.1.7 4.1-2.2 5.2-2.7.8-.4-3.6 2.8-10.2.8-13.4-2.1-3.3-6.7-.1-7.9 2.4-2.1 4.2-.4 8.7 0 13.1.2 2-.8 8.9-3.8 4.8-3.1-4.3 2.5-11.6.2-16.3-1.1-2.2-5.8-3.5-7.2-1-.8 1.4 1 3.4.3 4.8s-2.2 1.2-2.8-.3c-.8-2.1 2.2-4.8-.1-6.5-1.3-.9-3.5.3-4.9.5-2.4-.1-3.3 0-4.5 2-.7 1.2-.4 3-2.3 2.1-1.9-.8-1.7-4.3-4.1-4.9-2.1-.6-4 1.3-5.1 2.9-.9 1.4-1.3 3-1.3 4.6 0 1.9 1.4 4.2.3 6-2.4 4.2-4.2-2.2-3.8-4.4.5-2.9 2-7.7-2.7-7.5-5.2.3-6.1 5.8-6.4 9.8-.1 1.3 1.5 10.4-2 8.4-1.8-1-.5-7.5-.6-9.1-.1-3.5-1.6-8.3-6.3-7.1-7.6 1.9 2.1 18.2-4.8 18.7-3.7.3-2.3-6.2-2-8.1.5-3.1.5-11.4-5.5-8.5-2.2 1.1-1 2.3-1.3 4.3-.2 1.8-1.3 3.2-2.3.8-1.1-2.5.8-6.7-3.9-6.6-8 .1-.7 16.4-4.8 15.8-2.8-.4-1-9.3-1.3-11.3-.6-3.5-3.5-7.8-7.8-6.9-4.4.9-1.4 6.5-1.4 9.1 0 3.1-3.4 5.9-4.4 1.7-.5-2.2.9-4.4.6-6.6-.3-1.9-1.5-4.1-3.2-5.2-5.3-3.4-4.9 5.2-8.1 4.5-1.4-.3-3-8.1-6.1-4.1-.7.9 2 10.3-2.2 8-2-1.1-.1-6.7-.7-8.9-1.8-6.2-4.7 2.3-6.1 3.1-2.9 1.7-4.6-6.2-6.3-.6-.5 1.7-.4 3.7-.2 5.4.2 1.6 1.5 4.6 1 6.1-.6 1.8-1.7 1.7-2.6.3-1-1.6-.4-4.5-.2-6.2.3-2.5 2.4-8.4-.2-10.3-3.1-2.1-6.8 2.1-7.7 4.5-1.5 4.3.3 8.7.5 13 .1 3.2-3 7.5-4.3 2.4-.6-2.4.2-5.1.6-7.4.4-2.3 1.2-6-.1-8.1-1.2-1.9-5.8-2.7-7-.5-.9 1.6 1.2 5.2-.6 5.6-2.4.6-2-2.3-1.8-3.4.3-1.5 1.1-3.2-.4-4.3-1.2-.9-4.7.3-5.9.5-2.4.5-2.5 1.4-3.6 3.3-1.2 2.1-1.4 1.7-3-.1-1.3-1.5-1.7-3.6-4-3.7-1.8-.1-3.4 1.7-4.2 3-1.4 2.2-1.3 4.1-1 6.5.2 1.4 1 3.8-.5 4.9-3.9 2.9-3.2-4.6-2.9-6.3.8-3.9-.4-8.1-5.4-5.6-3.8 1.9-4.1 6.7-4.1 10.5 0 1.6 1.2 5.8-.1 6.9-.8.7-1.8.3-2.4-.5-1.1-1.5.1-6.7 0-8.5-.1-3.5-.9-6.9-4.9-7.4-3.6-.6-6.7 1.2-6.8 4.9-.1 3.9 2 8.2.6 12-.9 2.4-2.9 2.9-4.6.9-2.4-2.8-.4-9 0-12.3.4-4.2.2-7-1.8-10.8C1.1 2.8.6 2.1 0 1.4v26.4h283.5V2.2c-.3.4-.6.8-.8 1.2z">
+                </path>
+            </svg>
+        </div>
+    </section>
+
+    <section class="container">
+        <h1 class="header-title">BCSIR টেস্টে স্বীকৃত ব্যথার প্রাকৃতিক প্রতিকার !</h1>
+    </section>
+
+    <!-- Size Guide -->
+    <section class="mb-3">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-sm-12">
+                    <img src="img-3/certificate.jpg" alt="Size Guide" class="img-fluid rounded shadow w-100">
+                </div>
+                <div class="text-center mt-3">
+                    <a href="#order" class="btn btn-primary btn-lg"><i class="fas fa-shopping-cart me-2"></i>অর্ডার করুন</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Section -->
+    <section class="my-1">
+        <h1 class="section-title">কেন ব্যবহার করবেন "সন্ধি মনি"?</h1>
+
+        <div class="feature-list">
+            <ul>
+                <li>
+                    <span class="feature-icon">
+                        <svg aria-hidden="true" class="e-font-icon-svg e-fas-leaf" viewBox="0 0 576 512"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M546.2 9.7c-5.6-12.5-21.6-13-28.3-1.2C486.9 62.4 431.4 96 368 96h-80C182 96 96 182 96 288c0 7 .8 13.7 1.5 20.5C161.3 262.8 253.4 224 384 224c8.8 0 16 7.2 16 16s-7.2 16-16 16C132.6 256 26 410.1 2.4 468c-6.6 16.3 1.2 34.9 17.5 41.6 16.4 6.8 35-1.1 41.8-17.3 1.5-3.6 20.9-47.9 71.9-90.6 32.4 43.9 94 85.8 174.9 77.2C465.5 467.5 576 326.7 576 154.3c0-50.2-10.8-102.2-29.8-144.6z">
+                            </path>
+                        </svg>
+                    </span>
+                    <span class="feature-text">আয়ুর্বেদিক ও প্রাকৃতিক উপাদানে তৈরি</span>
+                </li>
+                <li>
+                    <span class="feature-icon">
+                        <svg aria-hidden="true" class="e-font-icon-svg e-fas-leaf" viewBox="0 0 576 512"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M546.2 9.7c-5.6-12.5-21.6-13-28.3-1.2C486.9 62.4 431.4 96 368 96h-80C182 96 96 182 96 288c0 7 .8 13.7 1.5 20.5C161.3 262.8 253.4 224 384 224c8.8 0 16 7.2 16 16s-7.2 16-16 16C132.6 256 26 410.1 2.4 468c-6.6 16.3 1.2 34.9 17.5 41.6 16.4 6.8 35-1.1 41.8-17.3 1.5-3.6 20.9-47.9 71.9-90.6 32.4 43.9 94 85.8 174.9 77.2C465.5 467.5 576 326.7 576 154.3c0-50.2-10.8-102.2-29.8-144.6z">
+                            </path>
+                        </svg>
+                    </span>
+                    <span class="feature-text">কোনো পার্শ্বপ্রতিক্রিয়া নেই</span>
+                </li>
+                <li>
+                    <span class="feature-icon">
+                        <svg aria-hidden="true" class="e-font-icon-svg e-fas-leaf" viewBox="0 0 576 512"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M546.2 9.7c-5.6-12.5-21.6-13-28.3-1.2C486.9 62.4 431.4 96 368 96h-80C182 96 96 182 96 288c0 7 .8 13.7 1.5 20.5C161.3 262.8 253.4 224 384 224c8.8 0 16 7.2 16 16s-7.2 16-16 16C132.6 256 26 410.1 2.4 468c-6.6 16.3 1.2 34.9 17.5 41.6 16.4 6.8 35-1.1 41.8-17.3 1.5-3.6 20.9-47.9 71.9-90.6 32.4 43.9 94 85.8 174.9 77.2C465.5 467.5 576 326.7 576 154.3c0-50.2-10.8-102.2-29.8-144.6z">
+                            </path>
+                        </svg>
+                    </span>
+                    <span class="feature-text">ঘরে বসেই সহজে ব্যবহারযোগ্য</span>
+                </li>
+                <li>
+                    <span class="feature-icon">
+                        <svg aria-hidden="true" class="e-font-icon-svg e-fas-leaf" viewBox="0 0 576 512"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M546.2 9.7c-5.6-12.5-21.6-13-28.3-1.2C486.9 62.4 431.4 96 368 96h-80C182 96 96 182 96 288c0 7 .8 13.7 1.5 20.5C161.3 262.8 253.4 224 384 224c8.8 0 16 7.2 16 16s-7.2 16-16 16C132.6 256 26 410.1 2.4 468c-6.6 16.3 1.2 34.9 17.5 41.6 16.4 6.8 35-1.1 41.8-17.3 1.5-3.6 20.9-47.9 71.9-90.6 32.4 43.9 94 85.8 174.9 77.2C465.5 467.5 576 326.7 576 154.3c0-50.2-10.8-102.2-29.8-144.6z">
+                            </path>
+                        </svg>
+                    </span>
+                    <span class="feature-text">৭ দিনের ব্যবহারে উপকার পান অনেকেই</span>
+                </li>
+                <li>
+                    <span class="feature-icon">
+                        <svg aria-hidden="true" class="e-font-icon-svg e-fas-leaf" viewBox="0 0 576 512"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M546.2 9.7c-5.6-12.5-21.6-13-28.3-1.2C486.9 62.4 431.4 96 368 96h-80C182 96 96 182 96 288c0 7 .8 13.7 1.5 20.5C161.3 262.8 253.4 224 384 224c8.8 0 16 7.2 16 16s-7.2 16-16 16C132.6 256 26 410.1 2.4 468c-6.6 16.3 1.2 34.9 17.5 41.6 16.4 6.8 35-1.1 41.8-17.3 1.5-3.6 20.9-47.9 71.9-90.6 32.4 43.9 94 85.8 174.9 77.2C465.5 467.5 576 326.7 576 154.3c0-50.2-10.8-102.2-29.8-144.6z">
+                            </path>
+                        </svg>
+                    </span>
+                    <span class="feature-text">নামাজ পড়া, চলাফেরা ও দৈনন্দিন কাজ সহজ হয়</span>
+                </li>
+            </ul>
+        </div>
+        <div class="text-center">
+            <a href="#order" class="btn btn-primary btn-lg"><i class="fas fa-shopping-cart me-2"></i>অর্ডার করুন</a>
+        </div>
+    </section>
+
+    <!-- service Section -->
+    <section class="my-3">
+        <h1 class="section-title">ব্যথার জায়গায় সরাসরি কাজ করে:</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="service-item">
+                        <h3>হাঁটুর ব্যথা</h3>
+                        <p>
+                            বয়স বৃদ্ধির সঙ্গে সঙ্গে হাঁটুর জয়েন্টে ঘষা লাগে, তরল পদার্থ কমে গিয়ে ব্যথা বাড়ে।
+                            সন্ধি মনি তেল হাঁটুর জয়েন্টে গভীরভাবে ঢুকে প্রদাহ ও জড়তা কমায় এবং নিয়মিত ব্যবহারে হাঁটাচলা
+                            স্বাভাবিক করে।
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-item">
+                        <h3>হাঁটুর ব্যথা</h3>
+                        <p>
+                            বয়স বৃদ্ধির সঙ্গে সঙ্গে হাঁটুর জয়েন্টে ঘষা লাগে, তরল পদার্থ কমে গিয়ে ব্যথা বাড়ে।
+                            সন্ধি মনি তেল হাঁটুর জয়েন্টে গভীরভাবে ঢুকে প্রদাহ ও জড়তা কমায় এবং নিয়মিত ব্যবহারে হাঁটাচলা
+                            স্বাভাবিক করে।
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="#order" class="btn btn-primary btn-lg"><i class="fas fa-shopping-cart me-2"></i>অর্ডার করুন</a>
+        </div>
+    </section>
+    
+    <!-- Checkout Section -->
+    <section class="checkout-section" id="order">
+        <div class="container">
+            <div class="checkout-container p-md-4">
+                <div class="text-center mb-4">
+                    <h2 class="text-success"><strong>অর্ডার করতে নিচের ফর্মটি সম্পূর্ণ পূরন করুন</strong></h2>
+                </div>
+                <h4 class="mb-3">Your Products</h4>
+                <div class="row g-3 mb-4">
+                    <div class="col-12 col-md-6">
+                        <div class="product-card">
+                            <div class="badge-ribbon">ডেলিভারি চার্জ ফ্রি</div>
+
+                            <label class="radio-area">
+                                <input type="radio" name="product" checked/>
+                            </label>
+
+                            <img src="https://fitviewbd.com/wp-content/uploads/2024/10/20241017_122156.jpg" class="product-img" alt="Product">
+
+                            <div class="product-info">
+                                <h4 class="title">সজি মনি ২০০ মিলি</h4>
+
+                                <div class="qty-price">
+                                    <div class="qty-box">
+                                        <button class="qty-btn">-</button>
+                                        <input type="text" value="1" class="qty-input">
+                                        <button class="qty-btn">+</button>
+                                    </div>
+
+                                    <span class="price">৳ ৮৯০</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-12 col-md-6">
+                        <h4>Billing details</h4>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">নাম *</label>
+                            <input type="text" class="form-control" placeholder="নাম">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">ডেলিভারী এড্রেস *</label>
+                            <input type="text" class="form-control" placeholder="রোড নং, বাসা নং, জেলা">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">মোবাইল নাম্বার *</label>
+                            <input type="tel" class="form-control" placeholder="মোবাইল নাম্বার">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <h4>Your order</h4>
+                        <div class="d-flex justify-content-between py-2" style="border-bottom: 1px dotted #333;">
+                            <div>
+                                <img src="https://fitviewbd.com/wp-content/uploads/2024/10/20241017_122156.jpg" class="product-img" alt="Product">
+                                <span>Full Sleeve 3Piece × 1</span>
+                            </div>
+                            <span>৳ 950.00</span>
+                        </div>
+                        <div class="d-flex justify-content-between py-2" style="border-bottom: 1px dotted #333;">
+                            <span>Subtotal</span>
+                            <span>৳ 950.00</span>
+                        </div>
+                        <div class="d-flex justify-content-between fw-bold my-3">
+                            <span>Total</span>
+                            <span class="total-summary">৳ 1,070.00</span>
+                        </div>
+                        <div class="note-box p-2 small">
+                            ক্যাশ অন ডেলিভারি।<br>
+                            দয়া করে ১০০% নিশ্চিত হয়ে অর্ডার করুন, আপনার একটি ফেক অর্ডার হালাল ব্যবসার ক্ষতি করে।
+                        </div>
+                        <button class="btn checkout-btn w-100 mt-3 py-2">অর্ডার কমফার্ম করুন ৳ 1,070.00</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script>
+        // Size selection functionality
+        document.querySelectorAll('.size-option').forEach(option => {
+            option.addEventListener('click', function () {
+                document.querySelectorAll('.size-option').forEach(el => {
+                    el.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+
+        // Shipping option selection
+        document.querySelectorAll('.shipping-option').forEach(option => {
+            option.addEventListener('click', function () {
+                document.querySelectorAll('.shipping-option').forEach(el => {
+                    el.classList.remove('active');
+                    el.querySelector('input').checked = false;
+                });
+                this.classList.add('active');
+                this.querySelector('input').checked = true;
+            });
+        });
+
+        // Quantity adjustment
+        document.querySelectorAll('.btn-outline-secondary').forEach(button => {
+            button.addEventListener('click', function () {
+                const parentCard = this.closest('.card-body');
+                const quantitySpan = parentCard.querySelector('.fw-bold');
+                let quantity = parseInt(quantitySpan.textContent);
+
+                if (this.querySelector('.fa-minus')) {
+                    if (quantity > 1) {
+                        quantitySpan.textContent = quantity - 1;
+                    }
+                } else {
+                    quantitySpan.textContent = quantity + 1;
+                }
+            });
+        });
+
+        // Product selection
+        document.querySelectorAll('.card .btn').forEach(button => {
+            if (button.textContent.includes('সিলেক্ট')) {
+                button.addEventListener('click', function () {
+                    const parentCard = this.closest('.card');
+                    const allCards = document.querySelectorAll('.card');
+
+                    allCards.forEach(card => {
+                        const btn = card.querySelector('.btn');
+                        if (btn.textContent.includes('সিলেক্ট')) {
+                            btn.classList.remove('btn-primary');
+                            btn.classList.add('btn-outline-primary');
+                            btn.textContent = 'সিলেক্ট করুন';
+                        }
+                    });
+
+                    this.classList.remove('btn-outline-primary');
+                    this.classList.add('btn-primary');
+                    this.textContent = 'সিলেক্টেড';
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
