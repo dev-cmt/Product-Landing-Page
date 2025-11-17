@@ -26,7 +26,8 @@
             color: var(--text-color);
             line-height: 1.6;
         }
-        .container{
+
+        .container {
             padding: 0 90px;
         }
 
@@ -139,7 +140,7 @@
 
         .feature-list ul {
             list-style-type: none;
-            padding: 0 8px;
+            padding: 0px 16px;
         }
 
         .feature-list ul li {
@@ -164,24 +165,24 @@
             font-weight: bolder;
         }
 
-        .service-item{
+        .service-item {
             background-color: #fff;
             border: 1px solid #ccc;
             padding: 0 8px;
             margin: 8px 0px;
             border-radius: 8px;
             box-shadow: 2px 4px 4px #0000004d;
-
         }
 
-        .service-item h3{
+        .service-item h3 {
             font-size: 22px;
             color: var(--primary-color);
             text-align: center;
             padding-top: 18px;
             font-weight: bolder;
         }
-        .service-item p{
+
+        .service-item p {
             font-size: 16px;
             text-align: center;
             padding: 10px 0;
@@ -190,12 +191,12 @@
         }
 
 
-        .checkout-section{
+        .checkout-section {
             background-color: #D6E9B24F;
             padding: 15px 0;
         }
 
-         .checkout-container {
+        .checkout-container {
             background: #fff;
             border: 1px solid #00571c;
             border-radius: 20px;
@@ -203,7 +204,7 @@
             border-bottom: 8px solid #00571c;
             padding: 14px;
         }
-        
+
 
         .product-card {
             position: relative;
@@ -286,7 +287,7 @@
             font-weight: bold;
             transform: rotate(45deg) translate(35px, -15px);
         }
-        
+
         .note-box {
             background: #f2f2f2;
             border-radius: 4px;
@@ -305,6 +306,10 @@
 
 
         @media (max-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+
             .hero-section {
                 padding: 60px 0;
             }
@@ -316,13 +321,16 @@
             .hero-section h1 {
                 font-size: 1.8rem;
             }
-            .header-title{
+
+            .header-title {
                 font-size: 22px;
             }
-            .section-title{
+
+            .section-title {
                 font-size: 22px;
             }
-            .feature-list .feature-text{
+
+            .feature-list .feature-text {
                 font-size: 18px;
             }
         }
@@ -349,7 +357,8 @@
                         </iframe>
                     </div>
 
-                    <a href="#order" class="btn btn-primary btn-lg mt-4"><i class="fas fa-shopping-cart me-2"></i>অর্ডার করুন</a>
+                    <a href="#order" class="btn btn-primary btn-lg mt-4"><i class="fas fa-shopping-cart me-2"></i>অর্ডার
+                        করুন</a>
 
                 </div>
             </div>
@@ -377,7 +386,8 @@
                     <img src="img-3/certificate.jpg" alt="Size Guide" class="img-fluid rounded shadow w-100">
                 </div>
                 <div class="text-center mt-3">
-                    <a href="#order" class="btn btn-primary btn-lg"><i class="fas fa-shopping-cart me-2"></i>অর্ডার করুন</a>
+                    <a href="#order" class="btn btn-primary btn-lg"><i class="fas fa-shopping-cart me-2"></i>অর্ডার
+                        করুন</a>
                 </div>
             </div>
         </div>
@@ -483,7 +493,7 @@
             <a href="#order" class="btn btn-primary btn-lg"><i class="fas fa-shopping-cart me-2"></i>অর্ডার করুন</a>
         </div>
     </section>
-    
+
     <!-- Checkout Section -->
     <section class="checkout-section" id="order">
         <div class="container">
@@ -498,10 +508,11 @@
                             <div class="badge-ribbon">ডেলিভারি চার্জ ফ্রি</div>
 
                             <label class="radio-area">
-                                <input type="radio" name="product" checked/>
+                                <input type="radio" name="product" checked />
                             </label>
 
-                            <img src="https://fitviewbd.com/wp-content/uploads/2024/10/20241017_122156.jpg" class="product-img" alt="Product">
+                            <img src="https://fitviewbd.com/wp-content/uploads/2024/10/20241017_122156.jpg"
+                                class="product-img" alt="Product">
 
                             <div class="product-info">
                                 <h4 class="title">সজি মনি ২০০ মিলি</h4>
@@ -542,7 +553,8 @@
                         <h4>Your order</h4>
                         <div class="d-flex justify-content-between py-2" style="border-bottom: 1px dotted #333;">
                             <div>
-                                <img src="https://fitviewbd.com/wp-content/uploads/2024/10/20241017_122156.jpg" class="product-img" alt="Product">
+                                <img src="https://fitviewbd.com/wp-content/uploads/2024/10/20241017_122156.jpg"
+                                    class="product-img" alt="Product">
                                 <span>Full Sleeve 3Piece × 1</span>
                             </div>
                             <span>৳ 950.00</span>
@@ -572,68 +584,55 @@
 
     <!-- Custom JS -->
     <script>
-        // Size selection functionality
-        document.querySelectorAll('.size-option').forEach(option => {
-            option.addEventListener('click', function () {
-                document.querySelectorAll('.size-option').forEach(el => {
-                    el.classList.remove('active');
-                });
-                this.classList.add('active');
-            });
-        });
+        document.addEventListener("DOMContentLoaded", function () {
 
-        // Shipping option selection
-        document.querySelectorAll('.shipping-option').forEach(option => {
-            option.addEventListener('click', function () {
-                document.querySelectorAll('.shipping-option').forEach(el => {
-                    el.classList.remove('active');
-                    el.querySelector('input').checked = false;
-                });
-                this.classList.add('active');
-                this.querySelector('input').checked = true;
-            });
-        });
+            const price = 890; // Product price
+            const deliveryCharge = 120; // Change if needed
+            const qtyInput = document.querySelector(".qty-input");
+            const totalSummary = document.querySelector(".total-summary");
+            const checkoutBtn = document.querySelector(".checkout-btn");
 
-        // Quantity adjustment
-        document.querySelectorAll('.btn-outline-secondary').forEach(button => {
-            button.addEventListener('click', function () {
-                const parentCard = this.closest('.card-body');
-                const quantitySpan = parentCard.querySelector('.fw-bold');
-                let quantity = parseInt(quantitySpan.textContent);
+            const subtotalText = document.querySelector(".subtotal-text");
+            const productPriceShow = document.querySelector(".price");
+            const orderItemPrice = document.querySelector(".order-item-price");
 
-                if (this.querySelector('.fa-minus')) {
-                    if (quantity > 1) {
-                        quantitySpan.textContent = quantity - 1;
-                    }
-                } else {
-                    quantitySpan.textContent = quantity + 1;
-                }
-            });
-        });
+            function updateCalculation() {
+                let qty = parseInt(qtyInput.value);
 
-        // Product selection
-        document.querySelectorAll('.card .btn').forEach(button => {
-            if (button.textContent.includes('সিলেক্ট')) {
-                button.addEventListener('click', function () {
-                    const parentCard = this.closest('.card');
-                    const allCards = document.querySelectorAll('.card');
+                if (qty < 1) qty = 1;
+                qtyInput.value = qty;
 
-                    allCards.forEach(card => {
-                        const btn = card.querySelector('.btn');
-                        if (btn.textContent.includes('সিলেক্ট')) {
-                            btn.classList.remove('btn-primary');
-                            btn.classList.add('btn-outline-primary');
-                            btn.textContent = 'সিলেক্ট করুন';
-                        }
-                    });
+                let productTotal = qty * price;
+                let total = productTotal + deliveryCharge;
 
-                    this.classList.remove('btn-outline-primary');
-                    this.classList.add('btn-primary');
-                    this.textContent = 'সিলেক্টেড';
-                });
+                // Update UI values
+                productPriceShow.textContent = "৳ " + productTotal;
+                orderItemPrice.textContent = "৳ " + productTotal;
+                totalSummary.textContent = "৳ " + total;
+                checkoutBtn.textContent = "অর্ডার কমফার্ম করুন ৳ " + total;
             }
+
+            // Minus button
+            document.querySelector(".qty-box button:first-child").addEventListener("click", function () {
+                qtyInput.value = parseInt(qtyInput.value) - 1;
+                updateCalculation();
+            });
+
+            // Plus button
+            document.querySelector(".qty-box button:last-child").addEventListener("click", function () {
+                qtyInput.value = parseInt(qtyInput.value) + 1;
+                updateCalculation();
+            });
+
+            // Manual input
+            qtyInput.addEventListener("keyup", updateCalculation);
+
+            // First load calculate
+            updateCalculation();
         });
     </script>
+
+
 </body>
 
 </html>
